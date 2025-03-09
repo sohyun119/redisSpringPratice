@@ -34,4 +34,10 @@ public class RedisConfig {
         return template;
     }
 
+    // Http Session 과 Session Clustering
+    @Bean
+    public RedisSerializer<Object> springSessionDefaultRedisSerializer(){
+        return RedisSerializer.json();
+    }
+
 }
